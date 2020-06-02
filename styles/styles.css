@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "c"
+    "o"
+    "f";
+  padding: 70px 24px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--red);
+  background-image: url("../images/bg-intro-mobile.png");
+}
+
+.content {
+  grid-area: c;
+}
+
+.content .heading {
+  margin: 27px 0;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+.content .info {
+  font-size: 15.5px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
+.offer {
+  grid-area: o;
+  margin-top: 60px;
+  padding: 26px 68px;
+  text-align: center;
+  border-radius: 7px;
+  color: white;
+  background-color: var(--blue);
+  -webkit-box-shadow: 0px 11px 5px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 11px 5px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 11px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+form {
+  grid-area: f;
+  margin-top: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 11px 5px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 11px 5px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 11px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+form .form-control {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  margin: 20px 0;
+  margin-bottom: 5px;
+  padding: 18px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  color: var(--dark-blue);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+form ::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+form .warning {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--red);
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+form .form-control i.fas {
+  font-size: 22px;
+  color: var(--red);
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+form button {
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--green);
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: rgb(154, 229, 196);
+}
+
+form .agreement {
+  font-size: 15px;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+form .agreement a {
+  color: var(--red);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 70px 170px;
+    background-image: url("../images/bg-intro-desktop.png");
+    grid-template-areas:
+      "c o"
+      "c f";
+    grid-column-gap: 35px;
+  }
+
+  .content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content .heading {
+    text-align: left;
+    font-size: 45px;
+  }
+
+  .content .info {
+    text-align: left;
+    font-size: 18px;
+  }
+}
